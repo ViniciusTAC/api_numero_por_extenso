@@ -102,8 +102,12 @@ def extenso(numero):
         if numero > 1000000:
             retorno = "Ainda não implementado para maiores que 1.000.000."
         else:
-            retorno+= maior1000(numero)
-
+            if numero < 1000:
+                 retorno+= menor1000(numero)
+            if numero > 1000:
+                 retorno+= maior1000(numero)
+           
+    
         return jsonify({"resultado": f"{str(retorno)}"}), 200
     
     except Exception as e:

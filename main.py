@@ -1,8 +1,13 @@
-from flask import Flask, request
+from flask import Flask, jsonify, request
 from extenso import extenso
 app = Flask(__name__)
 
 #  url para teste: http://127.0.0.1:5000/extenso?numero=23461
+
+# Rota básica para testar
+@app.route('/')
+def home():
+    return jsonify({"mensagem": "API funcionando na Vercel!"})
 
 # Rota de exemplo
 @app.route('/extenso', methods=['GET'])

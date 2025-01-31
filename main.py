@@ -14,7 +14,10 @@ def home():
 def extenso_controller():
     dados = request.args.get('numero', type=int)
     # print(dados)
-    resultado = extenso(dados)
+    if dados == None:
+        resultado = jsonify({"erro": f"Número igual a {dados}, não é possível processar número"}), 400
+    else:
+        resultado = extenso(dados)
     return resultado
 
 

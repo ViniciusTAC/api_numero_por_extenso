@@ -3,6 +3,8 @@
 Este projeto é uma API em Python que recebe um número como entrada e retorna sua representação por extenso.
 
 ## Funcionalidades
+- Suporta números de -999.999 até 999.999.
+- Números maiores ainda não foram implementados.
 
 - Recebe um número via requisição HTTP.
 - Retorna o número em formato por extenso.

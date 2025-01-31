@@ -35,9 +35,10 @@ for numero in numeros_para_testar:
 df_resultados = pd.DataFrame(resultados.items(), columns=["Número", "Extenso"])
 
 # Exibir os resultados
-# print(df_resultados)
+print(df_resultados)
 
-f = open("testar_api.txt", "a", encoding="utf-8")
+
+f = open("testar_api.txt", 'w+', encoding="utf-8")
 for _, row in df_resultados.iterrows():
     numero = str(row.get("Número"))
     extenso = row.get("Extenso")
